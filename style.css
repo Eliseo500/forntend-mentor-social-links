@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "Trickster";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+* {
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  font-family: "Trickster";
+
+  background-color: #141414;
+  color: #fff;
+}
+
+.card {
+  width: 100%;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+
+  background-color: #1f1f1f;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.avatar > img {
+  display: inline-block;
+  width: 100%;
+}
+
+.info {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 1.75rem;
+}
+
+.city {
+  font-weight: bold;
+  color: #bde243;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.bio {
+  opacity: 0.75;
+}
+
+.btn {
+  background-color: #333333;
+  border-radius: 0.35rem;
+  font-weight: 500;
+}
+
+.btn--large {
+  width: 100%;
+  padding-inline: 0.5rem;
+  padding-block: 0.75rem;
+}
+
+/* RESPONSIVE */
+
+.card {
+  width: clamp(120px, 50%, 500px);
+}
+
+.avatar {
+  width: clamp(5rem, 25%, 7rem);
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  color: #333333;
+  font-weight: bold;
+  background-color: #bde243;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.attribution a {
+  display: inline-block;
+  background-color: #333333;
+  color: #fff;
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  margin-left: 0.5em;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 475px) {
+  .card {
+    width: clamp(120px, 100%, 500px);
+  }
+}
